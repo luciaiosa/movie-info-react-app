@@ -2,7 +2,18 @@
     "compilerOptions": {
         "baseUrl": "./src",
         "paths": {
-            "@containers/*": ["containers/*"]
+            "@containers/*": [
+                "src/containers/*"
+            ],
+            "@components/*": [
+                "src/components/*"
+            ],
+            "@config/*": [
+                "src/config/*"
+            ],
         }
-    }
+    },
+    "include": [
+        "./src/**/**/*"
+    ]
 }
