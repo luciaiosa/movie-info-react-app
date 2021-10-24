@@ -32,7 +32,7 @@ export const charactersQuotesReducer: Reducer<
                 ...state,
                 loading: false,
                 hasError: true,
-                errorMessage: action.payload.message
+                errorMessage: action.payload
             };
         default:
             return state;
