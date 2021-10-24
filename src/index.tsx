@@ -1,13 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom';
+import App from './containers/app/App';
+import { store } from './store/Store';
+import { initTranslationConfiguration } from '@translations/translation-config';
+import { I18nextProvider } from 'react-i18next';
+import { Languages } from '@translations/languages';
+import './index.scss';
 
 ReactDOM.render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>,
+    <Provider store={store}>
+        <I18nextProvider i18n={initTranslationConfiguration(Languages.ES)}>
+            <App />
+        </I18nextProvider>
+    </Provider>,
     document.getElementById('root')
 );
 
