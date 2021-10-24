@@ -1,17 +1,17 @@
-.movie-detail {
+.character-detail {
     background-color: #fff;
     min-height: 75vh;
     margin-top: 20px;
 
-    .movie-detail-card {
+    .character-detail-card {
         display: flex;
-        margin-top: 20px;
+        margin: 20px 0;
 
         @media (max-width: 900px) {
             flex-wrap: wrap;
         }
     }
-    .movie-detail-card-description {
+    .character-detail-card-description {
         margin-top: 10px;
         padding: 20px;
         margin-bottom: 20px;
@@ -20,14 +20,14 @@
             margin-top: 10px;
         }
     }
-    .movie-detail-info-container {
+    .character-detail-info-container {
         font-size: 20px;
         display: flex;
         margin-top: 10px;
         margin-left: 20px;
         flex-wrap: wrap;
     }
-    .movie-detail-info-header-container {
+    .character-detail-info-header-container {
         display: flex;
         flex: 1 1;
         flex-direction: column;
@@ -39,9 +39,11 @@
     .link {
         text-decoration: none;
     }
+    .info {
+        width: 100%;
+        margin-top: 2rem;
+    }
     .info:first-child {
-        width: 75%;
-
         @media (max-width: 900px) {
             margin-top: 20px;
         }
@@ -64,10 +66,10 @@
             margin-bottom: 20px;
         }
     }
-    .movie-detail-card-content {
+    .character-detail-card-content {
         width: 100vw;
     }
-    .movie-image {
+    .character-image {
         position: relative;
         @media (max-width: 900px) {
             display: flex;
@@ -81,5 +83,8 @@
                 height: 500px;
             }
         }
+    }
+    .change-quote-button {
+        margin-top: 1rem;
     }
 }
