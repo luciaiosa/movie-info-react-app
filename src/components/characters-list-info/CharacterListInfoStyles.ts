@@ -2,9 +2,19 @@ import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 
 export const styles = makeStyles((theme: Theme) =>
     createStyles({
-        root: {
-            flexGrow: 1,
-            marginBottom: '1rem'
+        paper: {
+            padding: theme.spacing(2),
+            textAlign: 'center',
+            color: theme.palette.text.secondary
+        },
+        container: {
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'flex-start',
+            alignContent: 'center',
+            overflow: 'hidden',
+            flexDirection: 'column',
+            minHeight: '75vh'
         },
         gridList: {
             width: '100%',

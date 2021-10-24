@@ -1,12 +1,13 @@
-import React, { FunctionComponent } from "react";
-import { styles } from "./HomeStyles";
+import { FunctionComponent } from 'react';
+import CharactersList from '@components/characters-list/CharactersList';
+import { styles } from './HomeStyles';
 
 const Home: FunctionComponent = (): JSX.Element => {
     const classes = styles();
 
     return (
         <div className={classes.root}>
-            MoviesList
+            <CharactersList />
         </div>
     );
 };
