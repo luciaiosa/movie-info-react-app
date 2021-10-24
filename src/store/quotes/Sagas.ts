@@ -13,16 +13,8 @@ export function* getCharactersQuotes(action: AnyAction) {
             services.charactersQuotesClient.fetch,
             action.payload
         );
-        if (response.length === 0) {
-            yield put(
-                setCharacterQuoteError({
-                    message: 'No characters quotes found'
-                })
-            );
-        } else {
-            yield put(getCharactersQuoteRequestSuccess(response));
-        }
+        yield put(getCharactersQuoteRequestSuccess(response));
     } catch (error) {
-        yield put(setCharacterQuoteError(error));
+        yield put(setCharacterQuoteError('Error'));
     }
 }

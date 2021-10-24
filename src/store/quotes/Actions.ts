@@ -16,7 +16,7 @@ export const getCharactersQuoteRequestSuccess = (
     payload: payload
 });
 
-export const setCharacterQuoteError = (payload: any) => ({
+export const setCharacterQuoteError = (payload: string) => ({
     type: SET_QUOTES_ERROR,
     payload
 });
