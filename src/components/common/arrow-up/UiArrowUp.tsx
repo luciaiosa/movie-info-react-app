@@ -1,15 +1,11 @@
 import './UiArrowUp.scss';
 
-const UiArrowUp = ({ className }) => {
-    const smoothScroll = (h) => {
-        let i = h || 0;
-        if (i < 20) {
-            setTimeout(() => {
-                window.scrollTo(0, i);
-                smoothScroll(i + 10);
-            }, 20);
-        }
-    };
+interface UiArrowUpProps {
+    className: string;
+}
+
+const UiArrowUp = (props: UiArrowUpProps) => {
+    const { className } = props;
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
