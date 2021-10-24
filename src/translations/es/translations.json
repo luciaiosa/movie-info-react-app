@@ -22,6 +22,7 @@
         "birthday": "Fecha de nacimiento",
         "occupation": "Ocupación",
         "id": "Id",
-        "quote": "Cita"
+        "quote": "Cita",
+        "quoteNotFoundMessage": "No se han encontrado citas del personaje"
     }
 }

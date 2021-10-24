@@ -22,6 +22,7 @@
         "birthday": "Birthday",
         "occupation": "Occupation",
         "id": "Id",
-        "quote": "Quote"
+        "quote": "Quote",
+        "quoteNotFoundMessage": "There are no character quotes"
     }
 }

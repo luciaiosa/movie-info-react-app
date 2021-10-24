@@ -1,4 +1,4 @@
-import { FunctionComponent, useEffect } from 'react';
+import { FunctionComponent, useEffect, useState } from 'react';
 import { RouteComponentProps } from 'react-router';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -22,19 +22,17 @@ const CharacterDetail: FunctionComponent<
     RouteComponentProps<CharacterDetailParams>
 > = (props) => {
     const dispatch = useDispatch();
-    const { t } = useTranslation('translations');
-    const { selectedCharacter, hasError, errorMessage } = useSelector<
+    const { t, i18n } = useTranslation('translations');
+    const { language } = i18n;
+    const { selectedCharacter, hasError } = useSelector<
         AppStore,
         CharacterStore
     >((state) => state.charactersStore);
 
-    const {
-        quotes,
-        hasError: quotesHasErrors,
-        errorMessage: quotesErrorMessage
-    } = useSelector<AppStore, CharactersQuotesStore>(
+    const { quotes } = useSelector<AppStore, CharactersQuotesStore>(
         (state) => state.charactersQuotesStore
     );
+    const [quotesErrorMessage, setQuotesErrorMessage] = useState('');
 
     useEffect(() => {
         const { params } = props.match;
@@ -48,6 +46,11 @@ const CharacterDetail: FunctionComponent<
         !!selectedCharacter &&
             dispatch(getCharacterQuoteRequest(selectedCharacter.name));
     }, [selectedCharacter]);
+
+    useEffect(() => {
+        quotes.length === 0 &&
+            setQuotesErrorMessage(t('charactersDetail.quoteNotFoundMessage'));
+    }, [quotes, language]);
 
     const onChangeQuoteClick = () => {
         !!selectedCharacter &&
