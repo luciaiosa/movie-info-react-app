@@ -1,0 +1,27 @@
+{
+    "header": {
+        "title": "Breaking Bad",
+        "languages": {
+            "es": "Español",
+            "en": "English"
+        }
+    },
+    "searchBar": {
+        "placeholder": "Search"
+    },
+    "charactersList": {
+        "title": "Characters list",
+        "errorMessage": "An error occured during the request",
+        "notFoundMessage": "Characters not found",
+        "moreResultsButton": "See more"
+    },
+    "charactersDetail": {
+        "backButton": "Go Back",
+        "changeQuoteButton": "Change quote",
+        "portrayed": "Portrayed",
+        "birthday": "Birthday",
+        "occupation": "Occupation",
+        "id": "Id",
+        "quote": "Quote"
+    }
+}

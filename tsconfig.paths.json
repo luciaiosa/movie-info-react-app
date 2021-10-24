@@ -2,18 +2,27 @@
     "compilerOptions": {
         "baseUrl": "./src",
         "paths": {
-            "@containers/*": [
-                "src/containers/*"
-            ],
             "@components/*": [
-                "src/components/*"
+                "components/*"
             ],
             "@config/*": [
-                "src/config/*"
+                "config/*"
             ],
+            "@containers/*": [
+                "containers/*"
+            ],
+            "@hooks/*": [
+                "hooks/*"
+            ],
+            "@services/*": [
+                "services/*"
+            ],
+            "@store/*": [
+                "store/*"
+            ],
+            "@translations/*": [
+                "translations/*"
+            ]
         }
-    },
-    "include": [
-        "./src/**/**/*"
-    ]
+    }
 }
