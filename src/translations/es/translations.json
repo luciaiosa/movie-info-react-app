@@ -1,0 +1,27 @@
+{
+    "header": {
+        "title": "Breaking Bad",
+        "languages": {
+            "es": "Español",
+            "en": "English"
+        }
+    },
+    "searchBar": {
+        "placeholder": "Buscar"
+    },
+    "charactersList": {
+        "title": "Listado de personajes",
+        "errorMessage": "Ha ocurrido un error durante la petición",
+        "notFoundMessage": "No se han encontrado personajes",
+        "moreResultsButton": "Ver más"
+    },
+    "charactersDetail": {
+        "backButton": "Volver",
+        "changeQuoteButton": "Cambiar cita",
+        "portrayed": "Actor",
+        "birthday": "Fecha de nacimiento",
+        "occupation": "Ocupación",
+        "id": "Id",
+        "quote": "Cita"
+    }
+}
