@@ -1,2 +1,2 @@
-export const homeRoute = () => "/";
-export const detailRoute = (id: string|number = ':id') => `/characters/${id}`; 
+export const homeRoute = () => '/';
+export const detailRoute = (id: string | number = ':id') => `/characters/${id}`;

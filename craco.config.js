@@ -1,5 +1,5 @@
 const path = require('path');
-const { ESLINT_MODES }  = require('@craco/craco');
+const { ESLINT_MODES } = require('@craco/craco');
 
 module.exports = {
     eslint: {
@@ -12,9 +12,13 @@ module.exports = {
     },
     webpack: {
         alias: {
-            '@containers': path.resolve(__dirname, 'src/containers/'),
-            "@components": path.resolve(__dirname, "src", "components"),
-            "@config": path.resolve(__dirname, "src", "config"),
+            '@components': path.resolve(__dirname, 'src', 'components'),
+            '@config': path.resolve(__dirname, 'src', 'config'),
+            '@containers': path.resolve(__dirname, 'src', 'containers/'),
+            '@hooks': path.resolve(__dirname, 'src', 'hooks/'),
+            '@services': path.resolve(__dirname, 'src', 'services/'),
+            '@store': path.resolve(__dirname, 'src', 'store/'),
+            '@translations': path.resolve(__dirname, 'src', 'translations/')
         }
-    },
-}
+    }
+};
